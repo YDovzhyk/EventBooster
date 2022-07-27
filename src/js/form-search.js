@@ -1,6 +1,5 @@
-'use strict';
 import { fetchCardsByName, fetchCardsByCountry } from './search-api';
-import listCountries from '../tamplates/listCountries.hbs';
+import listCountries from '../templates/list-countries.hbs';
 
 const formEl = document.querySelector('.search-form');
 
