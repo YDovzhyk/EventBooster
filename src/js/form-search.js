@@ -30,14 +30,13 @@ fetchCardsByName('', 'ca')
     pagination.on('beforeMove', async function (eventData) {
       const page = eventData.page;
       try {
-        const { data } = await fetchCardsByName(query, locale, page);
-        const result = response.data._embedded;
+        const { data } = await fetchCardsByName('', 'ca', page);
+        const result = data._embedded;
         conteinerEl.innerHTML = cardsRender(result.events);
       } catch (err) {
         console.log(err);
       }
     });
-
   })
   .catch(error => console.log(error));
 
