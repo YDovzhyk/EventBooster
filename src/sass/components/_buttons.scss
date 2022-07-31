@@ -1,5 +1,8 @@
 .buy-btn {
   @include button;
+
+  text-decoration: none;
+  display: inline-block;
 }
 
 .more-btn {

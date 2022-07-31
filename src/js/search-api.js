@@ -20,8 +20,7 @@ export const fetchCardsByName = (keyword, countryCode, page) => {
 export const fetchCardById = id => {
   const params = {
     apikey: API_KEY,
-    id: id,
   };
 
-  return axios.get(`${BASE_URL}`, { params });
+  return axios.get(`${BASE_URL}/${id}`, { params });
 };
