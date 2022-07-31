@@ -51,7 +51,9 @@ const openModal = event => {
           image: result.images[0].url,
           buyTicket: result.url,
         };
-        currentAuthor = result._embedded.attractions[0].name;
+        currentAuthor = result._embedded.attractions
+          ? result._embedded.attractions[0].name
+          : result.name;
         modalBackdropEl.innerHTML = modal(formatData);
       })
       .catch(error => console.log(error));
